@@ -1,0 +1,26 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+
+#
+#type User {
+#  id: ID!
+#  name: String!
+#}
+#
+#input NewTodo {
+#  text: String!
+#  userId: String!
+#}
+
+
+type Query {
+  doctor(input: DoctorQueryParam!): Doctor!
+  commentLabels: [CommentLabel!]!
+  comment(commentQueryParam: CommentQueryParam): Comment!
+}
+
+type Mutation {
+  createComment(input: NewComment!): Comment!
+}

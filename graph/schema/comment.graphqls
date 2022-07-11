@@ -1,0 +1,38 @@
+type CommentLabel {
+    Id: Int!
+    CommentLabel: String!
+    StarRating: Int!
+}
+
+type Comment {
+    Id: Int!
+    OrderId: Int!
+    DoctorUin: Int!
+    PatientUin: Int!
+    OperatorUin: String
+    IsShow: Int!
+    CommentContent: String
+    CommentLabels: [CommentLabel!]!
+    CommentStars: Int!
+}
+
+input CommentQueryParam {
+    Id: Int
+    OrderId: Int
+}
+
+input NewCommentLabel {
+    Id: Int!
+    CommentLabel: String!
+    StarRating: Int!
+}
+
+input NewComment {
+    OrderId: Int!
+    DoctorUin: Int!
+    PatientUin: Int!
+    IsShow: Int!
+    CommentContent: String
+    CommentLabels: [NewCommentLabel!]!
+    CommentStars: Int!
+}

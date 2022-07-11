@@ -1,0 +1,11 @@
+type Doctor {
+    Uin: Int!
+    Name: String!
+    Department: String!
+    Title: String!
+    Supplier: String!
+}
+
+input DoctorQueryParam {
+    Uin: Int!
+}
